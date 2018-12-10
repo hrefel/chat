@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Websocket 101</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="mario-chat">
+        <div id="chat-window">
+            <div id="output"></div>
+            <div id="feedback"></div>
+        </div>
+        <input id="handle" type="text" placeholder="Username">
+        <input id="message" type="text" placeholder="Message">
+        <button id="send">Send</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <script src="chat.js"></script>
+    <script>
+        var getIPAddress = function() {
+            $.getJSON("https://jsonip.com?callback=?", function(data) {
+                alert("Your IP address is :- " + data.ip);
+            });
+        };
+    </script>
+</body>
+</html>
